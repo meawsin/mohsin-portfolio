@@ -102,7 +102,7 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-10">Some of my works</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/ai-summarizer(1).png" alt="AI Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
@@ -149,6 +149,43 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/cook (0).png" alt="What Can I Cook" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">What Can I Cook?</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A full-stack web application that helps users discover recipes based on available ingredients and dietary preferences.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-cook')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <div class="h-48 w-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-6 border-b border-neutral-200 dark:border-neutral-800">
+                        <img src="assets/projects/doodle_app (0).png" alt="Digital Doodle Icon" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Digital Doodle</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A robust drawing application built with Flutter, demonstrating advanced state management and custom painting performance.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-doodle')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
+                    <span class="absolute top-4 right-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-2 py-1 rounded">Passion Project</span>
+                    <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Tour Buddy</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A personal utility app born out of a genuine need to manage travel expenses efficiently.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-tour')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -334,6 +371,82 @@
                 <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM14.82 10.87L5.8 5.64L14.08 11.6L14.82 10.87ZM15.91 11.96L19.46 9.92C20.18 9.5 20.18 8.5 19.46 8.08L16.27 6.25L15.17 7.35L15.91 11.96ZM14.82 13.13L14.08 12.4L5.8 18.36L14.82 13.13ZM15.17 16.65L16.27 17.75L19.46 15.92C20.18 15.5 20.18 14.5 19.46 14.08L15.91 12.04L15.17 16.65Z"/></svg>
                 Get it on Google Play
             </a>
+        </div>
+    </div>
+
+    <div id="modal-cook" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+        <div class="flex justify-between items-start mb-4">
+            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">What Can I Cook?</h3>
+            <button onclick="closeAllModals()" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-2xl leading-none">&times;</button>
+        </div>
+        
+        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 select-none">
+            <img draggable="false" src="assets/projects/cook (0).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (1).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (4).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (5).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (6).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/cook (7).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+        </div>
+        <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Drag to view more &rarr;</p>
+
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">A complete full-stack solution utilizing the Spoonacular API to help users discover meals based on ingredients they already have. Features include JWT authentication, favorites management, and dietary filtering.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl mt-6">
+            <div class="flex gap-2 text-xs font-mono flex-wrap">
+                <span>Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Node.js, Express, MongoDB, Tailwind CSS, API</span>
+            </div>
+            <a href="https://github.com/meawsin/What-Can-I-Cook" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                View Code
+            </a>
+        </div>
+    </div>
+
+    <div id="modal-doodle" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+        <div class="flex justify-between items-start mb-4">
+            <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Digital Doodle</h3>
+            <button onclick="closeAllModals()" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-2xl leading-none">&times;</button>
+        </div>
+        
+        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
+            <img draggable="false" src="assets/projects/doodle_app (3).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/doodle_app (2).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/doodle_app (1).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+        </div>
+        <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Drag to view screens &rarr;</p>
+
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">A robust, full-featured drawing application built with Flutter. This project demonstrates advanced state management, custom painting performance optimization, and local persistence (CRUD).</p>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl mt-6">
+            <div class="flex gap-2 text-xs font-mono flex-wrap">
+            <span>Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter, Dart, Local Storage</span>
+            </div>
+            <a href="https://github.com/meawsin/Doodleapp" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            View Code
+            </a>
+        </div>
+    </div>
+
+    <div id="modal-tour" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+        <div class="flex justify-between items-start mb-4">
+            <div>
+                <h3 class="text-2xl font-bold text-neutral-900 dark:text-white">Tour Buddy</h3>
+            </div>
+            <button onclick="closeAllModals()" class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white text-2xl leading-none">&times;</button>
+        </div>
+        
+        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
+            <img draggable="false" src="assets/projects/TourBuddylogo (2).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/TourBuddylogo (3).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img draggable="false" src="assets/projects/TourBuddylogo (4).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+        </div>
+
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">A personal utility app born out of a genuine need to manage travel expenses efficiently. It allows users to log, view, and reset their trip expenses through a highly intuitive and user-friendly mobile interface.</p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-xs md:text-sm font-bold">This app's features are still under development.</p>
+        <div class="flex gap-2 text-xs font-mono bg-neutral-100 dark:bg-neutral-800 p-3 rounded mt-4">
+            <span>Tech Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter, Dart</span>
         </div>
     </div>
 
