@@ -23,17 +23,38 @@
     </script>
     <style>
         body { transition: background-color 0.3s ease, color 0.3s ease; }
-        /* Hide scrollbar but keep scroll functionality */
+        
+        /* Hide scrollbar for modals but keep for projects */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        /* Custom drag cursor for desktop carousels */
+        
+        /* Custom Drag Cursor */
         .cursor-grab { cursor: grab; }
         .cursor-grabbing { cursor: grabbing !important; }
+
+        /* Elegant Custom Scrollbar for the Projects Section */
+        .project-scrollbar::-webkit-scrollbar {
+            height: 8px;
+        }
+        .project-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 4px;
+        }
+        .project-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #e5e5e5; /* Light mode thumb */
+            border-radius: 4px;
+        }
+        .dark .project-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #333333; /* Dark mode thumb */
+        }
+        .project-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: #a3a3a3;
+        }
     </style>
 </head>
 <body class="bg-bg-light text-neutral-800 dark:bg-bg-dark dark:text-neutral-200 font-sans antialiased relative">
 
-    <nav class="fixed top-0 w-full z-40 bg-white/80 dark:bg-bg-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-colors">
+    <nav id="navbar" class="fixed top-0 w-full z-40 bg-white/80 dark:bg-bg-dark/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-colors">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold tracking-tight text-neutral-900 dark:text-white">Abd Al Mohsin Siraj</a>
             <div class="flex items-center gap-4 md:gap-6">
@@ -206,13 +227,15 @@
         </div>
     </section>
 
-    <section id="projects" class="py-20 bg-surface-light dark:bg-surface-dark border-t border-neutral-200 dark:border-neutral-800 transition-colors">
+    <section id="projects" class="py-20 bg-surface-light dark:bg-surface-dark border-t border-neutral-200 dark:border-neutral-800 transition-colors overflow-hidden">
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-neutral-900 dark:text-white mb-10">Some of my works</h2>
+        </div>
+        
+        <div id="projects-marquee" class="flex overflow-x-auto project-scrollbar pb-6 pl-6 cursor-grab" style="scroll-behavior: auto;">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+            <div id="marquee-track-1" class="flex gap-6 pr-6 shrink-0">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/ki_oushodh.png" onerror="this.src='assets/projects/doodle_app (0).png'" alt="Ki Oushodh" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Ki Oushodh (কি ঔষধ)</h3>
@@ -223,7 +246,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/ai-summarizer(1).png" alt="AI Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">AI Research Summarizer</h3>
@@ -234,7 +257,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/PC-builder (2).jpg" alt="PC Builder Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">PC Builder Web App</h3>
@@ -245,22 +268,22 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/bup-bus-tracker (0).png" alt="App Project" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">BUP Bus Tracker (Live)</h3>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">Live bus tracking Android application for students to view bus locations and schedules. Developed in Flutter and available on Play Store.</p>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">Live bus tracking Android application for students to view bus locations and schedules.</p>
                         <div class="mt-auto">
                             <button onclick="openModal('modal-bus')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/BICE-2022.png" alt="App Project" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">BICE 2022 Central Portal</h3>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A centralized academic resource platform I created using Google Sites and have maintained consistently since 2022.</p>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A centralized academic resource platform I created using Google Sites and maintain consistently.</p>
                         <div class="mt-auto">
                             <a href="https://sites.google.com/view/bice-2022/" target="_blank" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1">
                                 Visit Live Site
@@ -270,7 +293,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <img src="assets/projects/cook (0).png" alt="What Can I Cook" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">What Can I Cook?</h3>
@@ -281,21 +304,20 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
                     <div class="h-48 w-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-6 border-b border-neutral-200 dark:border-neutral-800">
                         <img src="assets/projects/doodle_app (0).png" alt="Digital Doodle Icon" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                     </div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Digital Doodle</h3>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A robust drawing application built with Flutter, demonstrating advanced state management and custom painting performance.</p>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A robust drawing application built with Flutter, demonstrating advanced state management.</p>
                         <div class="mt-auto">
                             <button onclick="openModal('modal-doodle')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <span class="absolute top-4 right-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-bold px-2 py-1 rounded">Passion Project</span>
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
                     <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Tour Buddy</h3>
@@ -305,8 +327,103 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+            <div id="marquee-track-2" class="flex gap-6 pr-6 shrink-0" aria-hidden="true">
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/ki_oushodh.png" onerror="this.src='assets/projects/doodle_app (0).png'" alt="Ki Oushodh" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Ki Oushodh (কি ঔষধ)</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A Flutter app to instantly identify medicines offline using OCR and Local Database.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-kioushodh')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/ai-summarizer(1).png" alt="AI Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">AI Research Summarizer</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">Python-based dashboard connecting to arXiv API to generate NLP executive summaries.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-ai')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/PC-builder (2).jpg" alt="PC Builder Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">PC Builder Web App</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A web platform designed to simplify the process of building and managing custom PC configurations.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-pc')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/bup-bus-tracker (0).png" alt="App Project" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">BUP Bus Tracker (Live)</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">Live bus tracking Android application for students to view bus locations and schedules.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-bus')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/BICE-2022.png" alt="App Project" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">BICE 2022 Central Portal</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A centralized academic resource platform I created using Google Sites and maintain consistently.</p>
+                        <div class="mt-auto">
+                            <a href="https://sites.google.com/view/bice-2022/" target="_blank" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1">
+                                Visit Live Site
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <img src="assets/projects/cook (0).png" alt="What Can I Cook" class="h-48 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">What Can I Cook?</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A full-stack web application that helps users discover recipes based on available ingredients and dietary preferences.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-cook')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                    <div class="h-48 w-full bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center p-6 border-b border-neutral-200 dark:border-neutral-800">
+                        <img src="assets/projects/doodle_app (0).png" alt="Digital Doodle Icon" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Digital Doodle</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A robust drawing application built with Flutter, demonstrating advanced state management.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-doodle')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-none w-[85vw] sm:w-[350px] lg:w-[310px] bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
+                    <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy Project" class="h-48 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-2">Tour Buddy</h3>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-4 line-clamp-2">A personal utility app born out of a genuine need to manage travel expenses efficiently.</p>
+                        <div class="mt-auto">
+                            <button onclick="openModal('modal-tour')" class="text-sm font-semibold text-neutral-900 dark:text-white hover:underline">View Details →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -368,9 +485,9 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 select-none">
-            <img draggable="false" src="assets/projects/ai-summarizer(1).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/ai-summarizer(2).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/ai-summarizer(3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(1).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(2).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Swipe to see more &rarr;</p>
 
@@ -388,10 +505,10 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 select-none">
-            <img draggable="false" src="assets/projects/PC-builder (1).jpg" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/PC-builder (2).jpg" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/PC-builder (3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/PC-builder (4).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (1).jpg" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (2).jpg" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (4).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Swipe to view more &rarr;</p>
 
@@ -409,12 +526,12 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (4).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (5).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (3).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (6).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (7).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/bup-bus-tracker (1).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (4).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (5).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (3).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (6).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (7).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/bup-bus-tracker (1).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Swipe to view more screens &rarr;</p>
 
@@ -439,13 +556,13 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 select-none">
-            <img draggable="false" src="assets/projects/cook (0).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (1).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (4).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (5).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (6).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/cook (7).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (0).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (1).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (3).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (4).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (5).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (6).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/cook (7).png" class="w-full shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 h-64 md:h-80 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Drag to view more &rarr;</p>
 
@@ -469,9 +586,9 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img draggable="false" src="assets/projects/doodle_app (3).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/doodle_app (2).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/doodle_app (1).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (3).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (2).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (1).jpg" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Drag to view screens &rarr;</p>
 
@@ -496,12 +613,12 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img draggable="false" src="assets/projects/tour_buddy_home_dark.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/tour_buddy_light_theme.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/tour_buddy_expense_screen.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/tour_buddy_add_expense.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/tour_buddy_analytics_overview.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img draggable="false" src="assets/projects/tour_buddy_pdf_report.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_home_dark.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_light_theme.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_expense_screen.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_add_expense.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_analytics_overview.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_pdf_report.png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
 
         <p class="text-xs text-center text-neutral-400 mb-6 uppercase tracking-widest hidden md:block">&larr; Drag to view screens &rarr;</p>
@@ -509,7 +626,7 @@
         <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">Tour Buddy is a Flutter travel expense tracker with real-time Firebase sync, Google Sign-In, budget alerts, spending analytics with charts, and PDF expense report export. Built with clean Provider architecture and Material 3 design.</p>
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl mt-6">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-            <span>Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Firebase Firestore · Firebase Auth · Google Sign-In</span>
+            <span>Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Firebase Firestore · Auth</span>
             </div>
             <a href="https://github.com/meawsin/Tour_Buddy" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
@@ -525,14 +642,11 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-4 no-scrollbar mb-6 pb-2 bg-neutral-100 dark:bg-neutral-900 p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <div class="h-80 md:h-96 w-full shrink-0 snap-center bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center rounded-lg shadow-sm border border-neutral-300 dark:border-neutral-700 aspect-[9/16] p-4 text-neutral-400 text-center text-sm">
-                <img draggable="false" src="assets/projects/ki_oushodh(Scanning).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-                <img draggable="false" src="assets/projects/ki_oushodh(lightModeResult).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-                <img draggable="false" src="assets/projects/ki_oushodh(lightModeHistory).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-                <img draggable="false" src="assets/projects/ki_oushodh(lightModeFailed).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-                <img draggable="false" src="assets/projects/ki_oushodh(settings).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            
-            </div>
+            <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(Scanning).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(lightModeResult).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(lightModeHistory).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(lightModeFailed).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(settings).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
 
         <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">Ki Oushodh is an accessibility-first mobile application designed for elderly and low-literacy users. Using OCR paired with a offline database, the app instantly identifies scanned medications. Backed by a Wikipedia API fallback and native Text-to-Speech, it delivers a reliable, zero-latency experience to users regardless of their internet connection.</p>
@@ -548,10 +662,24 @@
     </div>
 
     <script>
+        // Calculate scrollbar width to prevent background jump
+        function getScrollbarWidth() {
+            return window.innerWidth - document.documentElement.clientWidth;
+        }
+
         // Modal Logic
         const backdrop = document.getElementById('modal-backdrop');
+        const navbar = document.getElementById('navbar');
         
         function openModal(modalId) {
+            const scrollbarWidth = getScrollbarWidth();
+            
+            // Add padding to prevent jumping
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+                navbar.style.paddingRight = `${scrollbarWidth}px`;
+            }
+            
             backdrop.classList.remove('hidden');
             document.getElementById(modalId).classList.remove('hidden');
             setTimeout(() => { backdrop.classList.remove('opacity-0'); }, 10);
@@ -563,12 +691,16 @@
             setTimeout(() => {
                 backdrop.classList.add('hidden');
                 document.querySelectorAll('.modal-content').forEach(m => m.classList.add('hidden'));
+                
+                // Remove padding and restore scroll
+                document.body.style.overflow = ''; 
+                document.body.style.paddingRight = '';
+                navbar.style.paddingRight = '';
             }, 300); 
-            document.body.style.overflow = 'auto'; 
         }
 
-        // Drag to Scroll functionality for desktop carousels
-        const sliders = document.querySelectorAll('.carousel-container');
+        // Drag to Scroll functionality (For modals and Marquee)
+        const sliders = document.querySelectorAll('.carousel-container, #projects-marquee');
         let isDown = false;
         let startX;
         let scrollLeft;
@@ -596,6 +728,47 @@
                 slider.scrollLeft = scrollLeft - walk;
             });
         });
+
+        // Infinite Javascript Marquee Logic
+        const marquee = document.getElementById('projects-marquee');
+        const marqueeTrack1 = document.getElementById('marquee-track-1');
+        let isHovered = false;
+        let scrollSpeed = 0.8; // Slightly bumped up for better visual flow
+        let exactScroll = 0; // Accumulator to fix desktop sub-pixel rounding bug
+
+        function animateMarquee() {
+            // Only auto-scroll if not hovered and not being dragged by the user
+            if (!isHovered && !isDown) {
+                exactScroll += scrollSpeed;
+                marquee.scrollLeft = exactScroll;
+                
+                // If we scrolled past the entire first track, instantly jump back to 0
+                if (marquee.scrollLeft >= marqueeTrack1.offsetWidth) {
+                    exactScroll = 0;
+                    marquee.scrollLeft = 0;
+                }
+            } else {
+                // If user is hovering or dragging, sync the math so it doesn't jump when they let go
+                exactScroll = marquee.scrollLeft;
+            }
+            requestAnimationFrame(animateMarquee);
+        }
+
+        // Pause marquee on hover (Desktop) and touch (Mobile)
+        marquee.addEventListener('mouseenter', () => isHovered = true);
+        marquee.addEventListener('mouseleave', () => isHovered = false);
+        marquee.addEventListener('touchstart', () => isHovered = true, {passive: true});
+        marquee.addEventListener('touchend', () => isHovered = false);
+
+        // Keep math synced if the user uses a trackpad or mouse wheel to scroll manually
+        marquee.addEventListener('scroll', () => {
+            if(isHovered || isDown) {
+                exactScroll = marquee.scrollLeft;
+            }
+        });
+
+        // Start animation loop
+        requestAnimationFrame(animateMarquee);
 
         // Dark mode logic
         var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
