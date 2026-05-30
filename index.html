@@ -664,7 +664,10 @@
             <img loading="lazy" draggable="false" src="assets/projects/ki_oushodh(settings).png" class="h-80 md:h-96 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
 
-        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">Ki Oushodh is an accessibility-first mobile application designed for elderly and low-literacy users. Using OCR paired with a offline database, the app instantly identifies scanned medications. Backed by a Wikipedia API fallback and native Text-to-Speech, it delivers a reliable, zero-latency experience to users regardless of their internet connection.</p>
+        <p class="text-neutral-600 dark:text-neutral-400 mb-4 text-sm md:text-base">Ki Oushodh (কি ঔষধ) is an accessibility-first Android app built for elderly and low-literacy users in Bangladesh to identify medicines by pointing their camera at a strip or box — no typing required.
+
+            <br>On-device ML Kit OCR extracts text from the camera frame and matches it against a bundled 13,929-medicine database (brand → generic name lookup) with fuzzy matching, making it fully offline with zero-latency results. A Wikipedia API fallback handles unrecognized drugs when connected. Results are read aloud via native Text-to-Speech in Bangla or English, with automatic fallback to English on devices without a Bengali voice pack installed.
+            <br>Built with accessibility at every layer: adjustable font scaling, high-contrast mode, 30-day scan history, and portrait-locked layout optimized for one-handed use.</p>
         <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-neutral-100 dark:bg-neutral-800 p-4 rounded-xl mt-6">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
                 <span>Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter, Dart, On-Device OCR, Local DB, TTS</span>
