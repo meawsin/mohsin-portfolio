@@ -341,12 +341,13 @@
                 </div>
 
                 <!-- 6. PC Builder -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                    <img src="assets/projects/PC-builder (1).png" alt="PC Builder" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
+                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300">Relational DBMS</span></div>
+                    <img src="assets/projects/03_pc_builder.png" alt="PC Builder" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
                     <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">PC Builder</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">PHP · MySQL · HTML/CSS · JavaScript</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Custom PC configuration tool with component compatibility checks, admin panel for product management, user order tracking, and bill generation. Built from hands-on hardware assembly and diagnosis experience.</p>
+                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">PC Builder & Management System</h3>
+                        <p class="text-xs text-neutral-500 mb-2 font-mono">PHP 8.2+ · MySQL 8.0 · DBMS · JavaScript</p>
+                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Full-stack hardware configuration and e-commerce platform. Features an automated compatibility engine for CPU sockets, RAM, and PSU wattage headroom, backed by a 13-table relational schema and real-time SQL analytics.</p>
                         <div class="mt-auto">
                             <button onclick="openModal('modal-pcbuilder')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
                         </div>
@@ -759,8 +760,8 @@
     <div id="modal-pcbuilder" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
         <div class="flex justify-between items-start mb-3 sm:mb-4">
             <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">PC Builder</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Hardware meets software</p>
+                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">PC Builder & Management System</h3>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Full-Stack Hardware Configuration, Compatibility Engine & Relational DBMS</p>
             </div>
             <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -768,23 +769,24 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (1).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (2).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (3).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (4).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (5).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/PC-builder (6).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/03_pc_builder.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/11_dbms_analytics.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/08_product_comparison.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/06_order_invoice.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/10_admin_dashboard.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/01_home_page.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view more &rarr;</p>
 
         <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>I have been building and diagnosing PCs since school. This project connects that hardware knowledge to software: users browse components, check compatibility, build configurations, and track orders.</p>
-            <p>PHP backend with MySQL. Role-based access: guests browse, registered users track orders and get component suggestions, admins manage the product catalog and generate bills. Built the entire CRUD system, session management, and admin dashboard from scratch.</p>
+            <p>Connecting hands-on hardware assembly and diagnostic background to software engineering. Built as a full-stack database management system (DBMS) project, the platform handles custom PC assembly, component compatibility checks, and e-commerce order fulfillment.</p>
+            <p>The configuration engine applies automated hardware validation rules across 7 component categories, verifying CPU socket generation, DDR4/DDR5 motherboard support, PSU power headroom, and physical chassis form factors in real time. Features side-by-side product comparisons, saved builds dashboard, order tracking, and print-ready itemized build invoices.</p>
+            <p>Built on a MySQL relational schema of 13 tables with enforced foreign key integrity across users, custom builds, orders, and hardware entities. The administrative dashboard runs multi-table SQL aggregations (COUNT, SUM, AVG, GROUP BY) to deliver real-time business intelligence on revenue, average build values, and component inventory.</p>
         </div>
         
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">PHP · MySQL · HTML/CSS · JavaScript</span>
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">PHP 8.2+ · MySQL 8.0 · Apache/XAMPP · JavaScript · Relational DBMS</span>
             </div>
             <a href="https://github.com/meawsin/PC-Builder" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
