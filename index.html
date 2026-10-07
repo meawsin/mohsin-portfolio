@@ -551,9 +551,9 @@
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
 
         <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>I built this because my grandmother cannot read medicine strips. Most health apps assume literacy and internet access, two things a large part of Bangladesh's elderly population lacks.</p>
-            <p>The app runs Google ML Kit OCR on-device to extract text from camera frames, then matches against a bundled SQLite database of 13,929 Bangladeshi medicines (brand name to generic name lookup) using fuzzy string matching. No server, no API calls, no latency. When connected, a Wikipedia API fallback handles unrecognized drug names.</p>
-            <p>Results are read aloud via Android's native Text-to-Speech engine in Bangla or English, with automatic language fallback for devices that lack a Bengali voice pack. The entire interface is designed for one-handed use: adjustable font scaling, high-contrast mode, portrait-locked layout, 30-day scan history.</p>
+            <p>I built this because my grandfather struggles to read tiny print on reflective medicine strips. Most health apps assume you have sharp eyesight, high reading literacy, and a stable internet connection—things many elderly people here in Bangladesh simply don't have.</p>
+            <p>The app runs text recognition on-device directly through the camera, cleaning up common issues like foil glare, embossed letters, and attached numbers (like Napa500). It then matches the text against an offline database of 13,929 Bangladeshi brands and 1,640 generics using a fast 5-tier fuzzy matching algorithm. Everything runs locally in under 350ms, no servers, no data collection, and no internet needed.</p>
+            <p>Instead of throwing medical jargon at the user, it reads clear, simple instructions aloud in natural Bangla or English using native text-to-speech. The interface is built entirely around accessibility: large tap targets for one-handed use, high-contrast themes, dynamic text sizing, and an encrypted 30-day scan history.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
