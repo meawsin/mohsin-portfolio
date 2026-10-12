@@ -75,6 +75,7 @@
             <div class="flex items-center gap-3 sm:gap-4 md:gap-6">
                 <div class="hidden md:flex space-x-6 text-sm font-medium">
                     <a href="#about" class="hover:text-neutral-500 dark:hover:text-neutral-400 transition">About</a>
+                    <a href="#research" class="hover:text-neutral-500 dark:hover:text-neutral-400 transition">Research</a>
                     <a href="#experience" class="hover:text-neutral-500 dark:hover:text-neutral-400 transition">Experience</a>
                     <a href="#projects" class="hover:text-neutral-500 dark:hover:text-neutral-400 transition">Projects</a>
                     <a href="#skills" class="hover:text-neutral-500 dark:hover:text-neutral-400 transition">Skills</a>
@@ -95,6 +96,7 @@
         <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 dark:border-neutral-800 bg-white/95 dark:bg-bg-dark/95 backdrop-blur-md">
             <div class="px-4 py-3 space-y-1">
                 <a href="#about" class="block py-2 px-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition" onclick="closeMobileMenu()">About</a>
+                <a href="#research" class="block py-2 px-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition" onclick="closeMobileMenu()">Research</a>
                 <a href="#experience" class="block py-2 px-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition" onclick="closeMobileMenu()">Experience</a>
                 <a href="#projects" class="block py-2 px-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition" onclick="closeMobileMenu()">Projects</a>
                 <a href="#skills" class="block py-2 px-3 text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition" onclick="closeMobileMenu()">Skills</a>
@@ -165,6 +167,26 @@
                         <p class="text-[11px] sm:text-xs text-neutral-600 dark:text-neutral-400">GPA: 5.00</p>
                     </div>
                 </div>            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESEARCH ===== -->
+    <section id="research" class="py-12 sm:py-16 max-w-5xl mx-auto px-4 sm:px-6">
+        <h2 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-6 sm:mb-8">Research</h2>
+        
+        <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl p-5 sm:p-6 shadow-sm">
+            <h3 class="font-bold text-neutral-900 dark:text-white text-base sm:text-lg mb-3 leading-snug">
+                Exploring the Potential of Secondary Reliability Factor Optimisation to Reduce the Reliability Gap Between Tier III and Tier IV Data Centres While Maintaining Energy Efficiency
+            </h3>
+            
+            <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                <p>
+                    Undergraduate thesis investigating whether optimizing secondary operational factors (such as cooling switchover latency, power path transfer delays, and predictive maintenance) can narrow the downtime gap between Tier III and Tier IV data centres without building duplicate power and cooling hardware. Our models indicated that targeted operational mitigation can close 30% to 60% of this annual downtime gap while preserving baseline Tier III energy efficiency.
+                </p>
+                <p>
+                    The main drawback was data availability; data centre telemetry and failure logs are proprietary and confidential. To evaluate the failure prediction models, we used an industrial proxy dataset alongside an empirical survey of local facilities.
+                </p>
+            </div>
         </div>
     </section>
 
