@@ -130,8 +130,8 @@
             <div>
                 <h2 class="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-white mb-4 sm:mb-5">About</h2>
 
-                <Graduate class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
-                    I am a <b>B.Sc. in Information and Communication Engineering</b> Graduate from Bangladesh University of Professionals with a CGPA of 3.58. Currently, I am working as an IT-Inter at <b>Startup Bangladesh Limited</b>, where I provide Enterprice IT support, build and deploy tools for automation and manage server environments with internal networks.
+                <p class="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
+                    I am a <b>B.Sc. in Information and Communication Engineering</b> graduate from Bangladesh University of Professionals with a CGPA of 3.58. Currently, I am working as an IT-Intern at <b>Startup Bangladesh Limited</b>, where I provide enterprise IT support, build and deploy tools for automation and manage server environments with internal networks.
                 </p>
 
                 <p class="text-xs sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
@@ -276,141 +276,86 @@
             <p class="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mb-6 sm:mb-8">Selected work. All source code on <a href="https://github.com/meawsin" target="_blank" class="underline hover:text-neutral-900 dark:hover:text-white">GitHub</a>.</p>
         </div>
         
-        <div id="projects-marquee" class="flex overflow-x-auto project-scrollbar pb-4 sm:pb-6 pl-4 sm:pl-6 cursor-grab lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:pl-0 lg:pb-0 lg:cursor-default lg:max-w-5xl lg:mx-auto lg:px-6" style="scroll-behavior: auto;">
-            <div id="marquee-track-1" class="flex gap-4 sm:gap-5 pr-4 sm:pr-6 shrink-0 lg:contents">
+        <div id="projects-marquee" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto px-4 sm:px-6">
 
-                <!-- 1. Ki Oushodh (ANCHOR) -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">Applied AI</span></div>
-                    <img src="assets/projects/ki_oushodh.png" onerror="this.src='assets/projects/doodle_app (0).png'" alt="Ki Oushodh" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Ki Oushodh (কি ঔষধ)</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · ML Kit OCR · Local DB · TTS</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Offline Android app for elderly and low-literacy users to identify medicines by pointing a camera at a strip. On-device OCR matches against a bundled database of 13,929 medicines. Zero network dependency.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-kioushodh')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
+            <!-- 1. Ki Oushodh -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/ki_oushodh.png" onerror="this.src='assets/projects/doodle_app (0).png'" alt="Ki Oushodh" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Ki Oushodh (কী ওষুধ)</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · ML Kit OCR · Hive DB · TTS</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Offline Android app for elderly and low-literacy users. It scans medicine strips using on-device OCR, matches names across 13,929 local medicines, and reads directions out loud in Bengali.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-kioushodh')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
                     </div>
                 </div>
-
-                <!-- 2. ACES Scanner (Automated Contact Extraction & Sync) -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300">Enterprise AI</span></div>
-                    <img src="assets/projects/aces-scanner.png" alt="ACES Scanner" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-900">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">ACES Scanner</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · ML Kit · Laravel · LLM · MS Graph</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Enterprise visiting card scanner built for Startup Bangladesh Limited. Captures cards via on-device OCR, normalizes messy text via LLM API, and syncs directly into corporate SharePoint directories.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-aces')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Architecture →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. BUP Bus Tracker -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300">Live on Play Store</span></div>
-                    <img src="assets/projects/bup-bus-tracker (0).png" alt="BUP Bus Tracker" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">BUP Bus Tracker</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Firebase Realtime DB · GeoLocation</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Real-time transit tracker for campus buses. Two-app system: a rider app for students and a driver app that pushes live GPS coordinates to Firebase. Deployed on Google Play, used daily.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-bus')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. AgriApp Ecosystem -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">Agritech Ecosystem</span></div>
-                    <img src="assets/projects/agriapp.png" alt="AgriApp Architecture" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-900">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">AgriApp Ecosystem</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Node.js · Express · MongoDB · Escrow</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Multi-role agricultural supply chain platform connecting farmers, field agents, retailers, and administrators. Built with quality inspection checklists, escrow payment protection, and offline local caching.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-agriapp')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Architecture →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 5. Tour Buddy -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                    <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy" class="h-44 sm:h-48 lg:h-44 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Tour Buddy</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Firebase Firestore · Auth · PDF Export</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Group travel expense tracker with real-time Firestore sync, algorithmic debt settlement, budget alerts, category analytics, and PDF ledger export. Built to eliminate debt confusion on group trips.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-tour')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 6. PC Builder -->
-                <div class="flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300">Relational DBMS</span></div>
-                    <img src="assets/projects/03_pc_builder.png" alt="PC Builder" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">PC Builder & Management System</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">PHP 8.2+ · MySQL 8.0 · DBMS · JavaScript</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Full-stack hardware configuration and e-commerce platform. Features an automated compatibility engine for CPU sockets, RAM, and PSU wattage headroom, backed by a 13-table relational schema and real-time SQL analytics.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-pcbuilder')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. Research Paper Summarizer (Secondary) -->
-                <div class="extra-project hidden flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md relative">
-                    <div class="absolute top-3 left-3 z-10"><span class="tag-pill bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">Python + NLP</span></div>
-                    <img src="assets/projects/ai-summarizer(1).png" alt="Research Summarizer" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Research Paper Summarizer</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Python · Streamlit · arXiv API · Transformers</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Academic research tool that queries arXiv by topic and generates structured summaries. Uses transformer models to extract key findings and save skimming time during thesis work.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-summarizer')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8. What Can I Cook (Secondary) -->
-                <div class="extra-project hidden flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                    <img src="assets/projects/cook (0).png" alt="What Can I Cook" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">What Can I Cook?</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Node.js · Express · MongoDB · Tailwind</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Full-stack web app that suggests recipes from whatever ingredients you already have. Dietary filters, saved favourites, user auth. Deployed on Vercel.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-cook')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 9. Digital Doodle (Secondary) -->
-                <div class="extra-project hidden flex-none w-[82vw] sm:w-[320px] lg:w-auto bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                    <img src="assets/projects/doodle_app (0).png" alt="Digital Doodle" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
-                    <div class="p-4 sm:p-5 flex-1 flex flex-col">
-                        <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Digital Doodle</h3>
-                        <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Dart · Canvas API · CustomPainter</p>
-                        <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Android drawing app with custom Canvas rendering, multi-touch pan and zoom, brush controls, undo/redo, and PNG export. Clean implementation of Flutter's CustomPainter.</p>
-                        <div class="mt-auto">
-                            <button onclick="openModal('modal-doodle')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details →</button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <!-- Toggle Button for Extra Projects -->
-        <div class="mt-6 sm:mt-8 text-center max-w-5xl mx-auto px-4 sm:px-6">
-            <button id="toggle-more-projects-btn" onclick="toggleMoreProjects()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-bg-dark text-neutral-800 dark:text-neutral-200 text-xs sm:text-sm font-semibold hover:border-neutral-400 dark:hover:border-neutral-500 shadow-sm transition">
-                <span id="more-projects-btn-text">View More Projects (3)</span>
-                <svg id="more-projects-arrow" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </button>
+            <!-- 2. BUP Bus Tracker -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/bup-bus-tracker (0).png" alt="BUP Bus Tracker" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">BUP Bus Tracker</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Firebase · Google Maps</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Live bus tracking app for university commuters. Shows real-time driver locations on Google Maps with arrival times, route alerts, and offline caching when cellular data drops.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-bus')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Cardex -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/aces-scanner.png" alt="Cardex" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-900">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Cardex</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Google ML Kit · Edge-AI</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Offline Android business card scanner. Captures cards with on-device OCR, sorts names, numbers, and emails using custom Dart rules, and saves contacts straight to your phone address book.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-cardex')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Tour Buddy -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy" class="h-44 sm:h-48 lg:h-44 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Tour Buddy</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Firebase · Google-Auth</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Offline-first travel expense tracker and itinerary notebook. Manages trip budgets across multiple currencies with saved exchange rates, logs shared costs, and syncs when back online.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-tour')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. PC Builder -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/03_pc_builder.png" alt="PC Builder" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">PC Builder</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">PHP · MySQL · Relational DBMS</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Full-stack PC assembly and parts store app. Checks CPU socket compatibility and power supply limits across 13 relational database tables with admin sales analytics.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-pcbuilder')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. What Can I Cook? -->
+            <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
+                <img src="assets/projects/cook (0).png" alt="What Can I Cook" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-top bg-neutral-100 dark:bg-neutral-800">
+                <div class="p-4 sm:p-5 flex-1 flex flex-col">
+                    <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">What Can I Cook?</h3>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Node.js · Express · MongoDB</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Full-stack recipe finder for home pantries. Matches whatever ingredients you have in your kitchen with recipe ideas from Spoonacular and a custom MongoDB recipe collection.</p>
+                    <div class="mt-auto">
+                        <button onclick="openModal('modal-cook')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -430,7 +375,7 @@
                 <ul class="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 flex-1">
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Ubuntu Server, Plesk, Apache</li>
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Custom PC Builds & Diagnosis</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>VirtualBox, Networking, SSH</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>VirtualBox, Networking</li>
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></div>Hardware Procurement</li>
                 </ul>
             </div>
@@ -442,10 +387,10 @@
                     <h3 class="font-semibold text-neutral-900 dark:text-white text-xs sm:text-sm">Mobile & Applied AI</h3>
                 </div>
                 <ul class="space-y-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 flex-1">
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Flutter & Dart (Android)</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Google ML Kit Vision (OCR)</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Flutter & Dart</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Google ML Kit Vision</li>
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>SQLite & Hive Persistence</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Android Text-to-Speech (TTS)</li>
+                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></div>Android Text-to-Speech</li>
                 </ul>
             </div>
 
@@ -459,7 +404,6 @@
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></div>React & Laravel</li>
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></div>Node.js, Express & MongoDB</li>
                     <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></div>PHP, MySQL</li>
-                    <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></div>REST API Architecture</li>
                 </ul>
             </div>
 
@@ -484,7 +428,7 @@
         <div class="bg-slate-800 dark:bg-neutral-900 rounded-2xl p-5 sm:p-8 md:p-10 text-white shadow-xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
             <div class="w-full">
                 <h2 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-3">Get in touch.</h2>
-                <p class="text-neutral-300 mb-5 sm:mb-6 max-w-sm text-xs sm:text-sm leading-relaxed">Looking for mid-level IT operations or software engineering roles in Dhaka. Also open to research collaboration on applied AI and accessibility.</p>
+                <p class="text-neutral-300 mb-5 sm:mb-6 max-w-sm text-xs sm:text-sm leading-relaxed">Looking for mid-level IT operations or software engineering roles in Dhaka. Also open to research opportunities in applied AI and accessibility.</p>
                 <div class="space-y-3 sm:space-y-3.5 text-xs sm:text-sm">
                     <div class="flex items-center gap-3 text-neutral-200">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -537,12 +481,12 @@
     <!-- ===== MODALS ===== -->
     <div id="modal-backdrop" class="fixed inset-0 bg-neutral-900/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="closeAllModals()"></div>
 
-    <!-- Ki Oushodh Modal -->
+    <!-- 1. Ki Oushodh Modal -->
     <div id="modal-kioushodh" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
         <div class="flex justify-between items-start mb-3 sm:mb-4">
             <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Ki Oushodh (কি ঔষধ)</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Accessibility-first medicine identifier for Bangladesh</p>
+                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Ki Oushodh (কী ওষুধ)</h3>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Offline Edge-AI medicine identifier for low-literacy users</p>
             </div>
             <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -558,15 +502,16 @@
         </div>
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
 
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>I built this because my grandfather struggles to read tiny print on reflective medicine strips. Most health apps assume you have sharp eyesight, high reading literacy, and a stable internet connection—things many elderly people here in Bangladesh simply don't have.</p>
-            <p>The app runs text recognition on-device directly through the camera, cleaning up common issues like foil glare, embossed letters, and attached numbers (like Napa500). It then matches the text against an offline database of 13,929 Bangladeshi brands and 1,640 generics using a fast 5-tier fuzzy matching algorithm. Everything runs locally in under 350ms, no servers, no data collection, and no internet needed.</p>
-            <p>Instead of throwing medical jargon at the user, it reads clear, simple instructions aloud in natural Bangla or English using native text-to-speech. The interface is built entirely around accessibility: large tap targets for one-handed use, high-contrast themes, dynamic text sizing, and an encrypted 30-day scan history.</p>
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline Android app for elderly and low-literacy users. It scans medicine strips using on-device OCR, matches names across 13,929 local medicines, and reads directions out loud in Bengali.</p>
+            <p>My grandfather could not read the tiny print on shiny medicine packets, and he kept mixing up his daily blood pressure tablets. Most health apps assume you have fast internet, good eyesight, and fluent English. At home, you often deal with poor lighting reflecting off silver foil, wrinkled strips, and patchy mobile data.</p>
+            <p>I built the app with Flutter and Google ML Kit to run completely offline on the phone. The camera scans the packet, cleans up glare, separates brand names from numbers (like turning "Napa500" into "Napa" and "500"), and runs the words through a 5-step search. If an exact match fails, it falls back to generic names, word cleanup, and fuzzy spelling matching. It searches through 13,929 Bangladeshi brands and 1,640 generics in Hive DB in under 350 milliseconds.</p>
+            <p>The app does not expect users to read small text on screen. Instead, it speaks the medicine name and dosage rules out loud in clear Bengali or English. I set the speech pace to be slow and calm so it is easy to understand. Big buttons sit at the bottom where thumbs naturally rest, the phone vibrates when a scan succeeds, and scan history deletes itself after 30 days without ever leaving the device.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · ML Kit OCR · SQLite · TTS</span>
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · ML Kit OCR · Hive DB · Bengali TTS</span>
             </div>
             <div class="flex items-center gap-2.5 w-full sm:w-auto flex-wrap">
                 <a href="https://github.com/meawsin/ki_oushodh/releases/latest/download/ki-oushudh-v1.0.apk" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-lg text-xs font-semibold transition shrink-0">
@@ -581,46 +526,12 @@
         </div>
     </div>
 
-    <!-- ACES Scanner Modal -->
-    <div id="modal-aces" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
-        <div class="flex justify-between items-start mb-3 sm:mb-4">
-            <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">ACES Scanner</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Automated Contact Extraction & Sync (Startup Bangladesh Limited)</p>
-            </div>
-            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <div class="mb-4 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-900">
-            <img src="assets/projects/aces-scanner.png" alt="ACES Architecture" class="w-full h-auto object-contain">
-        </div>
-
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>At Startup Bangladesh Limited, staff collect hundreds of physical visiting cards across startup summits and investor sessions. Manually transcribing card details into corporate spreadsheets was slow and caused typos. I built ACES to replace manual data entry with an automated mobile capture and ingestion pipeline.</p>
-            <p>The Flutter client runs Google ML Kit Vision API directly on the phone. A custom state machine prompts the user to align the card's front, triggers a haptic confirmation upon text detection, shifts to the back side (with a single-sided skip button), and shuts down the camera stream immediately to preserve memory and battery.</p>
-            <p>Raw text strings hit a Laravel REST middleware. The backend prompts an LLM with strict JSON schemas to parse messy names, designations, phone numbers, and addresses while correcting OCR typos. Laravel then queries Microsoft SharePoint via Microsoft Graph API to detect conflicts (promotions, job changes, duplicate contacts) before committing verified rows to the enterprise directory.</p>
-            <p>Recent scans cache locally in Hive for instant offline history access. The architecture decouples the mobile client from the storage layer, allowing future backend migrations without modifying the mobile application.</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
-            <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · ML Kit Vision · Laravel · LLM API · MS Graph · Hive</span>
-            </div>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 text-xs font-medium shrink-0">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                Private Enterprise Project (SBL)
-            </span>
-        </div>
-    </div>
-
-    <!-- BUP Bus Tracker Modal -->
+    <!-- 2. BUP Bus Tracker Modal -->
     <div id="modal-bus" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
         <div class="flex justify-between items-start mb-3 sm:mb-4">
             <div>
                 <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">BUP Bus Tracker</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Real-time campus transit system</p>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Real-time campus transit tracking for university commuters</p>
             </div>
             <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -637,14 +548,17 @@
         </div>
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
 
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Built with a friend to fix a real daily problem. Hundreds of BUP students used to stand at stops guessing when the bus would show up. No schedule was reliable because Dhaka traffic isn't predictable.</p>
-            <p>The system has two parts: a rider app that displays live bus location on a map, and a separate driver-side app that streams GPS coordinates to Firebase Realtime Database. Students see estimated arrival, route, and schedule. Live on the Google Play Store, used daily by students.</p>
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Live bus tracking app for university commuters. Shows real-time driver locations on Google Maps with arrival times, route alerts, and offline caching when cellular data drops.</p>
+            <p>Hundreds of students at BUP used to wait by the roadside every morning with no idea where the university bus was. Dhaka traffic always ruined the schedule. Missing a bus meant paying for expensive rides or arriving late for morning exams.</p>
+            <p>Me and one of my friend built a two-app system using Flutter and Firebase Realtime Database. The driver app runs a background GPS service that posts location cordinates to firebase every few seconds, and Cloud Functions share it to Student app. The student app draws the bus location and route line on Google Maps. We also cached route data locally so the map keeps showing the path even when buses drive through network dead zones.</p>
+            <p>We kept the student screen simple: a live map, clear status badges (Active, In Transit, Idle), and schedules collected from MT Section. To save driver battery, the app pauses GPS pings whenever the bus stops for a while, and it reconnects instantly when cell service returns. The app is live on Google Play and students use it daily across campus. We also launched a <a href="https://bus-tracker-bup.web.app/" target="_blank" rel="noopener noreferrer" class="text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300 underline">web version</a> for non android users.</p>
+            <p>We have updated the app with new features and improvements based on user feedback. Now a student can also share bus location on behalf of the driver using the driver app.</p>
         </div>
         
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Firebase Realtime DB</span>
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Firebase Realtime DB · Cloud Functions · Google Maps</span>
             </div>
             <a href="https://play.google.com/store/apps/details?id=com.bus_tracker_user_app.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-900/40 dark:hover:bg-emerald-800/60 text-emerald-800 dark:text-emerald-300 text-xs font-semibold transition shrink-0">
                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5V3.5C3 2.91 3.34 2.39 3.84 2.15L13.69 12L3.84 21.85C3.34 21.6 3 21.09 3 20.5ZM14.82 10.87L5.8 5.64L14.08 11.6L14.82 10.87ZM15.91 11.96L19.46 9.92C20.18 9.5 20.18 8.5 19.46 8.08L16.27 6.25L15.17 7.35L15.91 11.96ZM14.82 13.13L14.08 12.4L5.8 18.36L14.82 13.13ZM15.17 16.65L16.27 17.75L19.46 15.92C20.18 15.5 20.18 14.5 19.46 14.08L15.91 12.04L15.17 16.65Z"/></svg>
@@ -653,12 +567,12 @@
         </div>
     </div>
 
-    <!-- AgriApp Modal -->
-    <div id="modal-agriapp" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+    <!-- 3. Cardex Modal -->
+    <div id="modal-cardex" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
         <div class="flex justify-between items-start mb-3 sm:mb-4">
             <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">AgriApp Ecosystem</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Agricultural Marketplace, Quality Control & Escrow Platform</p>
+                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Cardex</h3>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Offline on-device business card parser and contact manager</p>
             </div>
             <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -666,32 +580,113 @@
         </div>
         
         <div class="mb-4 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-900">
-            <img src="assets/projects/agriapp.png" alt="AgriApp Architecture" class="w-full h-auto object-contain">
+            <img src="assets/projects/aces-scanner.png" alt="Cardex Architecture" class="w-full h-auto object-contain">
         </div>
 
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Smallholder farmers in Bangladesh often struggle with middlemen exploitation, unpredictable crop pricing, and lack of verified quality standards. AgriApp is a multi-role agricultural supply chain platform designed to connect farmers, field agents, retailers, and administrators in a single verified ecosystem.</p>
-            <p>The system enforces a dedicated Quality Control layer before product dispatch: moisture percentage tracking, freshness rating, pest-free status, and photographic inspection. To prevent fraud, payments are held in escrow and released only after the buyer and quality agent confirm delivery standards. A disaster management module enables emergency fund allocations for crop damage.</p>
-            <p>The mobile client is built in Flutter with local SQLite storage for offline record-keeping in rural regions with poor cellular connectivity, synchronizing once connection is restored. The backend runs on Node.js and Express with JWT role-based access control and MongoDB data models.</p>
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline Android business card scanner. Captures cards with on-device OCR, sorts names, numbers, and emails using custom Dart rules, and saves contacts straight to your phone address book.</p>
+            <p>I made this as a knockoff from the internal visiting card scanner, that I built for automation at Startup Bangladesh, but gave it a different brain and open setup so anyone can use it without company accounts. Most commercial card scanner apps upload card photos to remote servers, which risks leaking private contact numbers and costs monthly fees. I wanted a tool that works in basement halls where cell signal is zero and never uploads private contact details anywhere.</p>
+            <p>The app has no internet permission in its Android configuration, so the operating system blocks any network access. When you aim the camera, the viewfinder waits until text fills most of the card before taking the shot. It runs Google ML Kit text recognition on-device with safety margins and contrast handling for dark cards. Then, custom Dart rules clean up icon artifacts, pick out person names by their position near job titles, format phone numbers into clean international style, and store the cards in a local SQLite database using Drift.</p>
+            <p>The review screen marks uncertain lines with a warning badge so you can check them before saving. If a card only has a company logo without plain text, it suggests company names from the email domain. Card photos are saved locally as lightweight JPEGs, and you can choose to discard photos entirely to keep just the text. Hitting save passes the parsed info directly into Android's native contacts app, keeping everything private on the device.</p>
         </div>
 
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Node.js · Express · MongoDB · SQLite · Escrow</span>
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter 3 · Dart · Google ML Kit · Drift SQLite · Android Intents</span>
             </div>
-            <a href="https://github.com/meawsin/Agri_App" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
+            <a href="https://github.com/meawsin/Cardex-V1" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                 View Source
             </a>
         </div>
     </div>
 
-    <!-- What Can I Cook Modal -->
+    <!-- 4. Tour Buddy Modal -->
+    <div id="modal-tour" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+        <div class="flex justify-between items-start mb-3 sm:mb-4">
+            <div>
+                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Tour Buddy</h3>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Offline-first travel expense tracker and itinerary notebook</p>
+            </div>
+            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        
+        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 bg-neutral-100 dark:bg-neutral-900 p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_home_dark.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_expense_screen.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_add_expense.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_analytics_overview.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_pdf_report.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_light_theme.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+        </div>
+        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
+
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline-first travel expense tracker and itinerary notebook. Manages trip budgets across multiple currencies with saved exchange rates, logs shared costs, and syncs when back online.</p>
+            <p>Keeping track of travel spending gets messy fast, especially when crossing borders, losing roaming data, and trying to split dinners in mixed currencies. I wanted an app that works fine on airplane mode in remote areas, stays free of ads, and lets you keep your daily packing notes right next to your receipts.</p>
+            <p>I built the app in Flutter using Provider for state management. The database uses Cloud Firestore with offline cache turned on, so every entry saves instantly to the phone and syncs to the cloud whenever Wi-Fi returns. For currency conversions, the app downloads live rates for five currencies (BDT, USD, EUR, GBP, and INR) from ExchangeRate-API and stores them locally. That way, any expense in a foreign currency converts back to your home budget even when offline.</p>
+            <p>The app has two main sections: an expense log and a trip notebook with ready-made templates for flights and hotels. Bottom sheets slide up for quick typing with one hand, expenses are split into six clear categories, and progress bars show how close you are to your budget limit. If you delete an entry by mistake, an undo button lets you restore it right away.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
+            <div class="flex gap-2 text-xs font-mono flex-wrap">
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Cloud Firestore · Provider · SharedPreferences · ExchangeRate-API</span>
+            </div>
+            <a href="https://github.com/meawsin/Tour_Buddy" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                View Source
+            </a>
+        </div>
+    </div>
+
+    <!-- 5. PC Builder Modal -->
+    <div id="modal-pcbuilder" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
+        <div class="flex justify-between items-start mb-3 sm:mb-4">
+            <div>
+                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">PC Builder</h3>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Hardware configuration engine, compatibility validation and relational DBMS</p>
+            </div>
+            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        
+        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 select-none">
+            <img loading="lazy" draggable="false" src="assets/projects/03_pc_builder.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/11_dbms_analytics.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/08_product_comparison.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/06_order_invoice.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/10_admin_dashboard.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/01_home_page.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+        </div>
+        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view more &rarr;</p>
+
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Full-stack PC assembly and parts store app. Checks CPU socket compatibility and power supply limits across 13 relational database tables with admin sales analytics.</p>
+            <p>First-time PC builders often waste money buying parts that physically do not fit together, like processors that do not match the motherboard socket or power supplies that are too weak for high-end graphics cards. On the shop side, store managers struggle to keep track of orders, parts inventory, and invoices across loose spreadsheets.</p>
+            <p>I built this for my DBMS Coursework, using the web app in PHP 8.2 on an Apache stack, connected to MySQL with 13 relational tables linked by foreign keys. A built-in validation script totals up estimated wattage and verifies compatibility rules for CPU sockets, motherboard RAM generations, power supply capacity, and case size before checkout. The admin dashboard uses SQL queries (COUNT, SUM, AVG, GROUP BY) to track sales totals, customer accounts, and popular components.</p>
+            <p>Shoppers can compare any two hardware parts side by side across clock speed, wattage, and price. Once a build is complete, it generates a clean printable invoice with item costs and totals. The system separates customer accounts from admin accounts, and finished orders stay tied to their unique build ID so purchase history remains accurate.</p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
+            <div class="flex gap-2 text-xs font-mono flex-wrap">
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">PHP 8.2+ · MySQL 8.0 · Apache/XAMPP · JavaScript · Relational DBMS</span>
+            </div>
+            <a href="https://github.com/meawsin/PC-Builder" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+                View Source
+            </a>
+        </div>
+    </div>
+
+    <!-- 6. What Can I Cook Modal -->
     <div id="modal-cook" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
         <div class="flex justify-between items-start mb-3 sm:mb-4">
             <div>
                 <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">What Can I Cook?</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Pantry-based recipe discovery</p>
+                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Pantry-based recipe discovery and meal management application</p>
             </div>
             <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -709,166 +704,18 @@
         </div>
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view more &rarr;</p>
 
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Input whatever ingredients are in your fridge, select dietary restrictions, get recipe suggestions. User accounts, saved favourites, search history. Deployed on Vercel.</p>
-            <p>Backend runs on Node.js with Express, data in MongoDB. Frontend is server-rendered HTML with Tailwind. Authentication, CRUD for favourites, and external recipe API integration.</p>
+        <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Full-stack recipe finder for home pantries. Matches whatever ingredients you have in your kitchen with recipe ideas from Spoonacular and a custom MongoDB recipe collection.</p>
+            <p>Most people stare at an open fridge with eggs, milk, and leftover vegetables, wondering what to cook, and end up ordering takeout while fresh food goes bad. Most recipe websites do not help because they bury simple steps under endless life stories, pop-up ads, and ingredients you do not have in your kitchen.</p>
+            <p>I built the backend using Node.js and Express with MongoDB Atlas and Mongoose. User accounts use bcrypt for secure password hashing and JSON Web Tokens for saved recipes and profile routes. When you pick ingredients from your pantry list, the app calls the Spoonacular API to find matching recipes. Users can also share their own recipes with photos uploaded through Multer and organized across six meal types (Breakfast, Lunch, Dinner, Snacks, Dessert, and Drinks).</p>
+            <p>The frontend is built with clean HTML and Tailwind CSS, plus a lightweight JavaScript helper for search modals and sidebar navigation. Errors show clear messages instead of broken screens, letting you find simple dinner ideas and filter out food allergies without clutter.</p>
         </div>
         
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
             <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Node.js · Express · MongoDB · Tailwind</span>
+                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Node.js · Express · MongoDB Atlas · Mongoose · Spoonacular API · Tailwind CSS</span>
             </div>
             <a href="https://github.com/meawsin/What-Can-I-Cook" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-                View Source
-            </a>
-        </div>
-    </div>
-
-    <!-- Tour Buddy Modal -->
-    <div id="modal-tour" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
-        <div class="flex justify-between items-start mb-3 sm:mb-4">
-            <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Tour Buddy</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Collaborative travel finance tracker</p>
-            </div>
-            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 bg-neutral-100 dark:bg-neutral-900 p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_home_dark.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_light_theme.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_expense_screen.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_add_expense.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_analytics_overview.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_pdf_report.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-        </div>
-        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
-
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Group trips frequently end with confusion over shared costs, uneven payments, and chasing friends in chat groups. I built Tour Buddy to handle expense tracking and settlement across all trip members in real time.</p>
-            <p>The app uses an algorithmic debt settlement model that simplifies multiple cross-member debts into the minimum possible transactions, eliminating circular payments. Real-time data syncs across devices using Firebase Firestore, with atomic array operations (FieldValue.arrayUnion and arrayRemove) preventing race conditions or stale overwrites during concurrent updates.</p>
-            <p>Includes budget alert thresholds (50%, 80%, 100%), multi-currency support with offline exchange rate fallbacks, interactive spending analytics, and a formatted PDF financial ledger export with itemized tables and grand totals. Supports Google Sign-In with anonymous account migration.</p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
-            <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Firebase Firestore · Auth · PDF</span>
-            </div>
-            <a href="https://github.com/meawsin/Tour_Buddy" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-                View Source
-            </a>
-        </div>
-    </div>
-
-    <!-- PC Builder Modal -->
-    <div id="modal-pcbuilder" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
-        <div class="flex justify-between items-start mb-3 sm:mb-4">
-            <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">PC Builder & Management System</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Full-Stack Hardware Configuration, Compatibility Engine & Relational DBMS</p>
-            </div>
-            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/03_pc_builder.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/11_dbms_analytics.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/08_product_comparison.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/06_order_invoice.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/10_admin_dashboard.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/01_home_page.png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-        </div>
-        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view more &rarr;</p>
-
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Connecting hands-on hardware assembly and diagnostic background to software engineering. Built as a full-stack database management system (DBMS) project, the platform handles custom PC assembly, component compatibility checks, and e-commerce order fulfillment.</p>
-            <p>The configuration engine applies automated hardware validation rules across 7 component categories, verifying CPU socket generation, DDR4/DDR5 motherboard support, PSU power headroom, and physical chassis form factors in real time. Features side-by-side product comparisons, saved builds dashboard, order tracking, and print-ready itemized build invoices.</p>
-            <p>Built on a MySQL relational schema of 13 tables with enforced foreign key integrity across users, custom builds, orders, and hardware entities. The administrative dashboard runs multi-table SQL aggregations (COUNT, SUM, AVG, GROUP BY) to deliver real-time business intelligence on revenue, average build values, and component inventory.</p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
-            <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">PHP 8.2+ · MySQL 8.0 · Apache/XAMPP · JavaScript · Relational DBMS</span>
-            </div>
-            <a href="https://github.com/meawsin/PC-Builder" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-                View Source
-            </a>
-        </div>
-    </div>
-
-    <!-- Research Summarizer Modal -->
-    <div id="modal-summarizer" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
-        <div class="flex justify-between items-start mb-3 sm:mb-4">
-            <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Research Paper Summarizer</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Automated arXiv research digest</p>
-            </div>
-            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(1).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(2).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/ai-summarizer(3).png" class="h-52 sm:h-64 md:h-72 w-auto shrink-0 snap-center object-contain rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-        </div>
-        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view more &rarr;</p>
-
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>During thesis research, I was spending hours skimming abstracts to decide which papers to read. So I built a tool that fetches papers from arXiv and generates structured summaries automatically.</p>
-            <p>Python backend. Queries the arXiv API by keyword, downloads paper metadata and abstracts, runs NLP-based summarization, and presents results in a searchable dashboard. Saved me significant reading time during my final year.</p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
-            <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Python · arXiv API · NLP</span>
-            </div>
-            <a href="https://github.com/meawsin/Research-paper-summarizer" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-                View Source
-            </a>
-        </div>
-    </div>
-
-    <!-- Doodle App Modal -->
-    <div id="modal-doodle" class="modal-content fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-3xl bg-white dark:bg-surface-dark border border-neutral-200 dark:border-neutral-700 rounded-2xl shadow-2xl z-50 hidden p-4 sm:p-6 max-h-[90vh] overflow-y-auto no-scrollbar">
-        <div class="flex justify-between items-start mb-3 sm:mb-4">
-            <div>
-                <h3 class="text-lg sm:text-xl font-bold text-neutral-900 dark:text-white">Digital Doodle</h3>
-                <p class="text-xs text-neutral-500 mt-0.5 sm:mt-1">Touch canvas graphics engine with gesture pan and zoom</p>
-            </div>
-            <button onclick="closeAllModals()" class="p-1.5 rounded-lg text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition" aria-label="Close modal">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-        </div>
-        
-        <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 bg-neutral-100 dark:bg-neutral-900 p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (0).png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (1).jpg" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (2).jpg" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (3).jpg" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/doodle_app (4).jpg" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-        </div>
-        <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
-
-        <div class="space-y-2.5 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p>Android digital drawing application built directly on Flutter's low-level graphics pipeline. Designed for smooth, low-latency touch input.</p>
-            <p>Uses Flutter's CustomPainter and Canvas APIs to render strokes without external drawing packages. Features dynamic brush sizes, opacity adjustments, color palettes, undo and redo action stacks, interactive pan and zoom navigation, local canvas persistence across sessions, and lossless PNG export directly to local device storage.</p>
-        </div>
-        
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-neutral-100 dark:bg-neutral-800 p-3.5 sm:p-4 rounded-xl mt-4 sm:mt-5">
-            <div class="flex gap-2 text-xs font-mono flex-wrap">
-                <span class="text-neutral-500">Stack:</span> <span class="text-neutral-900 dark:text-white font-semibold">Flutter · Dart · Canvas API · CustomPainter</span>
-            </div>
-            <a href="https://github.com/meawsin/Doodleapp" target="_blank" class="w-full sm:w-auto flex items-center justify-center gap-2 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-4 py-2 rounded-lg text-xs font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition shrink-0">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                 View Source
             </a>
