@@ -306,7 +306,7 @@
 
             <!-- 3. Cardex -->
             <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                <img src="assets/projects/aces-scanner.png" alt="Cardex" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-900">
+                <img src="assets/projects/cardex_banner.jpg" alt="Cardex" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-100 dark:bg-neutral-800">
                 <div class="p-4 sm:p-5 flex-1 flex flex-col">
                     <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Cardex</h3>
                     <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Google ML Kit · Edge-AI</p>
@@ -579,13 +579,13 @@
             </button>
         </div>
         
-        <div class="mb-4 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-900">
-            <img src="assets/projects/aces-scanner.png" alt="Cardex Architecture" class="w-full h-auto object-contain">
+        <div class="mb-4 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-800">
+            <img src="assets/projects/cardex_banner.jpg" alt="Cardex Data Extraction" class="w-full h-auto object-contain">
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline Android business card scanner. Captures cards with on-device OCR, sorts names, numbers, and emails using custom Dart rules, and saves contacts straight to your phone address book.</p>
-            <p>I made this as a knockoff from the internal visiting card scanner, that I built for automation at Startup Bangladesh, but gave it a different brain and open setup so anyone can use it without company accounts. Most commercial card scanner apps upload card photos to remote servers, which risks leaking private contact numbers and costs monthly fees. I wanted a tool that works in basement halls where cell signal is zero and never uploads private contact details anywhere.</p>
+            <p>I made this as a knockoff from the internal visiting card scanner that I built for automation at Startup Bangladesh, but gave it a different brain and open setup so anyone can use it without company accounts. Most commercial card scanner apps upload card photos to remote servers, which risks leaking private contact numbers and costs monthly fees. I wanted a tool that works in basement halls where cell signal is zero and never uploads private contact details anywhere.</p>
             <p>The app has no internet permission in its Android configuration, so the operating system blocks any network access. When you aim the camera, the viewfinder waits until text fills most of the card before taking the shot. It runs Google ML Kit text recognition on-device with safety margins and contrast handling for dark cards. Then, custom Dart rules clean up icon artifacts, pick out person names by their position near job titles, format phone numbers into clean international style, and store the cards in a local SQLite database using Drift.</p>
             <p>The review screen marks uncertain lines with a warning badge so you can check them before saving. If a card only has a company logo without plain text, it suggests company names from the email domain. Card photos are saved locally as lightweight JPEGs, and you can choose to discard photos entirely to keep just the text. Hitting save passes the parsed info directly into Android's native contacts app, keeping everything private on the device.</p>
         </div>
