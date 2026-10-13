@@ -341,7 +341,7 @@
 
             <!-- 4. Tour Buddy -->
             <div class="bg-white dark:bg-bg-dark border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden flex flex-col transition shadow-sm hover:shadow-md">
-                <img src="assets/projects/TourBuddylogo.png" alt="Tour Buddy" class="h-44 sm:h-48 lg:h-44 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
+                <img src="assets/projects/tour_buddy_banner.png" alt="Tour Buddy" class="h-44 sm:h-48 lg:h-44 w-full object-cover bg-neutral-100 dark:bg-neutral-800">
                 <div class="p-4 sm:p-5 flex-1 flex flex-col">
                     <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Tour Buddy</h3>
                     <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Firebase · Google-Auth</p>
@@ -636,18 +636,18 @@
         </div>
         
         <div class="carousel-container cursor-grab flex overflow-x-auto snap-x gap-3 sm:gap-4 no-scrollbar mb-3 sm:mb-4 pb-2 bg-neutral-100 dark:bg-neutral-900 p-3 sm:p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 select-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_home_dark.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_expense_screen.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_add_expense.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_analytics_overview.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_pdf_report.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
-            <img loading="lazy" draggable="false" src="assets/projects/tour_buddy_light_theme.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/01_dashboard.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/02_plan_trip_sheet.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/03_expense_ledger.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/05_trip_insights.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/07_past_trips.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
+            <img loading="lazy" draggable="false" src="assets/projects/08_settings.png" class="h-52 sm:h-64 md:h-80 w-auto shrink-0 snap-center object-contain rounded-lg shadow-sm border border-neutral-200 dark:border-neutral-700 pointer-events-none">
         </div>
         <p class="text-[11px] sm:text-xs text-center text-neutral-400 mb-3 uppercase tracking-wider">&larr; Drag or swipe to view screens &rarr;</p>
 
         <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
             <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline-first travel expense tracker and itinerary notebook. Manages trip budgets across multiple currencies with saved exchange rates, logs shared costs, and syncs when back online.</p>
-            <p>Keeping track of travel spending gets messy fast, especially when crossing borders, losing roaming data, and trying to split dinners in mixed currencies. I wanted an app that works fine on airplane mode in remote areas, stays free of ads, and lets you keep your daily packing notes right next to your receipts.</p>
+            <p>Keeping track of travel spending gets messy fast, especially when crossing borders, losing roaming data, and paying in unfamiliar currencies. I wanted an app that works fine on airplane mode in remote areas, stays free of ads, and lets you keep your daily packing notes right next to your receipts.</p>
             <p>I built the app in Flutter using Provider for state management. The database uses Cloud Firestore with offline cache turned on, so every entry saves instantly to the phone and syncs to the cloud whenever Wi-Fi returns. For currency conversions, the app downloads live rates for five currencies (BDT, USD, EUR, GBP, and INR) from ExchangeRate-API and stores them locally. That way, any expense in a foreign currency converts back to your home budget even when offline.</p>
             <p>The app has two main sections: an expense log and a trip notebook with ready-made templates for flights and hotels. Bottom sheets slide up for quick typing with one hand, expenses are split into six clear categories, and progress bars show how close you are to your budget limit. If you delete an entry by mistake, an undo button lets you restore it right away.</p>
         </div>
