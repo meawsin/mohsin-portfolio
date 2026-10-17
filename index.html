@@ -110,7 +110,7 @@
         <div class="flex-1 text-center md:text-left">
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-3 sm:mb-4 tracking-tight">Abd Al Mohsin Siraj</h1>
             <p class="text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 mb-5 sm:mb-6 max-w-xl leading-relaxed mx-auto md:mx-0">
-                Information & Communication Engineering graduate from BUP. I build offline first mobile applications with on-device AI and manage Linux server environments.
+                Information & Communication Engineering graduate from BUP. I build offline-first mobile applications with on-device OCR/ML tools and manage Linux server environments.
             </p>
             <div class="flex flex-wrap justify-center md:justify-start gap-2.5 sm:gap-3">
                 <a href="assets/abd-al-mohsin-siraj-resume.pdf" target="_blank" class="bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium transition text-xs sm:text-sm">View Resume</a>
@@ -137,7 +137,7 @@
                 </p>
 
                 <p class="text-xs sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mb-3">
-                    My core technical interest is in applied edge AI and offline-first applications built for low-connectivity environments, on-device intelligence without cloud dependency, and data center systems reliability.
+                    My core technical interest is in offline-first mobile systems, applied machine learning, on-device intelligence without cloud dependency, and data center systems reliability.
                 </p>
 
                 <p class="text-xs sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
@@ -207,7 +207,7 @@
                         <ul class="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed space-y-1.5 list-disc list-inside">
                             <li>Coordinated corporate website revamp with external vendor, managing content migration from legacy WordPress, quality assurance, and public data compliance standards.</li>
                             <li>Delivered enterprise IT operations support and managed hardware and software troubleshooting, including drafting technical specifications for equipment tenders.</li>
-                            <li>Engineered internal automation tools (ACES, SBL Companion) and configured Ubuntu virtual machines using Plesk and CloudPanel for staging and service deployments.</li>
+                            <li>Engineered internal automation tools (SBL Card Scanner, SBL Companion) and configured Ubuntu virtual machines using Plesk and CloudPanel for staging and service deployments.</li>
                             <li>Fixed the bugs and performed testing for the <a href="https://imm.startupbangladesh.gov.bd/" target="_blank" class="font-semibold text-neutral-900 dark:text-white hover:opacity-75">IMM Platform</a> and contributed to validation workflows for the national <a href="https://startup.ictd.gov.bd/" target="_blank" class="font-semibold text-neutral-900 dark:text-white hover:opacity-75">NSEP</a> portal.</li>
                         </ul>
                     </div>
@@ -331,8 +331,8 @@
                 <img src="assets/projects/cardex_banner.jpg" alt="Cardex" class="h-44 sm:h-48 lg:h-44 w-full object-cover object-center bg-neutral-100 dark:bg-neutral-800">
                 <div class="p-4 sm:p-5 flex-1 flex flex-col">
                     <h3 class="font-bold text-neutral-900 dark:text-white mb-1 text-sm sm:text-base">Cardex</h3>
-                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Google ML Kit · Edge-AI</p>
-                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Offline Android business card scanner. Captures cards with on-device OCR, sorts names, numbers, and emails using custom Dart rules, and saves contacts straight to your phone address book.</p>
+                    <p class="text-xs text-neutral-500 mb-2 font-mono">Flutter · Google ML Kit · In Progress</p>
+                    <p class="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-3 sm:mb-4 line-clamp-3 leading-relaxed">Ongoing offline Android business card scanner (evolved from my SBL Card Scanner workflow). Captures cards with on-device Google ML Kit OCR, parses names, numbers, and emails using custom Dart rules, and exports contacts to the phone address book.</p>
                     <div class="mt-auto">
                         <button onclick="openModal('modal-cardex')" class="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-white hover:underline flex items-center gap-1.5">View Details &rarr;</button>
                     </div>
@@ -606,7 +606,7 @@
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            <p class="font-medium text-neutral-900 dark:text-neutral-200">Offline Android business card scanner. Captures cards with on-device OCR, sorts names, numbers, and emails using custom Dart rules, and saves contacts straight to your phone address book.</p>
+            <p class="font-medium text-neutral-900 dark:text-neutral-200">Ongoing offline Android business card scanner (evolved from my SBL Card Scanner workflow). Captures cards with on-device Google ML Kit OCR, parses names, numbers, and emails using custom Dart rules, and exports contacts to the phone address book.</p>
             <p>I built this as an open-source, zero-cloud alternative inspired by the internal contact scanner I developed at Startup Bangladesh, designing it so anyone can parse cards privately without enterprise accounts. Most commercial card scanner apps upload card photos to remote servers, which risks leaking private contact numbers and costs monthly fees. I wanted a tool that works in basement halls where cell signal is zero and never uploads private contact details anywhere.</p>
             <p>The app has no internet permission in its Android configuration, so the operating system blocks any network access. When you aim the camera, the viewfinder waits until text fills most of the card before taking the shot. It runs Google ML Kit text recognition on-device with safety margins and contrast handling for dark cards. Then, custom Dart rules clean up icon artifacts, pick out person names by their position near job titles, format phone numbers into clean international style, and store the cards in a local SQLite database using Drift.</p>
             <p>The review screen marks uncertain lines with a warning badge so you can check them before saving. If a card only has a company logo without plain text, it suggests company names from the email domain. Card photos are saved locally as lightweight JPEGs, and you can choose to discard photos entirely to keep just the text. Hitting save passes the parsed info directly into Android's native contacts app, keeping everything private on the device.</p>
